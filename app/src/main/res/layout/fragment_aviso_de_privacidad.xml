@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentos.fragmentosMain.AvisoDePrivacidad" >
+
+    <ScrollView
+        style="@style/scrollview_track_vertical"
+        android:fadeScrollbars="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/textoNegroTVBoldTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Aviso de privacidad"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/textoNegroTVnormal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Compromiso del cliente con la protección de datos y la privacidad La protección de tus datos personales y tu privacidad es la mayor preocupación de VindiAPP.  Principios VindiAPP manifiesta su compromiso con la privacidad y la protección de los datos adoptando los siguientes principios. VindiAPP utiliza los datos personales de forma legal, justa y transparente. VindiAPP no recopila más datos personales de los necesarios y solo lo hace con un fin legítimo. VindiAPP no retiene más datos de los necesarios, ni durante un periodo más largo de lo necesario. VindiAPP protege los datos personales con las medidas de seguridad adecuadas." />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

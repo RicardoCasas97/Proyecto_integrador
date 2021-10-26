@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentos.fragmentosMain.QuienesSomos"
+    android:background="@null">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/SomosVindi"
+        style="@style/textoNegroTVBoldTitulo"
+        android:layout_width="245dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Somos Vindi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Somos Vindi" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/textoNegroTVnormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="VindiApp es una aplicación movil  que sirve personalizar un artículo deseado y asi dando la oportunidad al usuario de plasmar sus diseños en los diferentes artículos personalizados que contamos o ya sea que un diseño que le guste."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SomosVindi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

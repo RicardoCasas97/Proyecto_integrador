@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "346032967926",
+    "firebase_url": "https://vindiapp-default-rtdb.firebaseio.com",
+    "project_id": "vindiapp",
+    "storage_bucket": "vindiapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346032967926:android:338d95cd71ac6860c19cd7",
+        "android_client_info": {
+          "package_name": "com.example.segundoplano"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346032967926-mbas7okhokk8rqoqj4t0s8a96p17kakr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.segundoplano",
+            "certificate_hash": "b922fbfe7151d0cfb990688b6c6cc267dbea2dfa"
+          }
+        },
+        {
+          "client_id": "346032967926-1427kf5s77m5l0oo0cqvrkgvqere5b8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVLoKKM4HmQ36NritigvAQKr1aDFnuIYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346032967926-1427kf5s77m5l0oo0cqvrkgvqere5b8j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

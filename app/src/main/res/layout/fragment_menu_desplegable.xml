@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="180dp"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="#000000"
+    tools:context=".fragmentos.menu_desplegable">
+
+    <Button
+        android:id="@+id/botonQuienesSomos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/Transparente"
+        android:fontFamily="@font/mounthills"
+        style="@style/textoBlancoTVBoldMenu"
+        android:text="Apartado #1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonPerfil" />
+
+    <Button
+        android:id="@+id/botonNuestrosProductos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apartado #2"
+        style="@style/textoBlancoTVBoldMenu"
+        android:fontFamily="@font/mounthills"
+        android:background="@color/Transparente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonQuienesSomos" />
+
+    <Button
+        android:id="@+id/botonAvisoDePrivacidad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/textoBlancoTVBoldMenu"
+        android:background="@color/Transparente"
+        android:fontFamily="@font/mounthills"
+        android:text="Cuestionario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonNuestrosProductos"
+        tools:text="Aviso de privacidad" />
+
+    <Button
+        android:id="@+id/botonPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Perfil"
+        style="@style/textoBlancoTVBoldMenu"
+
+        android:fontFamily="@font/mounthills"
+        android:background="@color/Transparente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonCerrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/textoBlancoTVBoldMenu"
+        android:background="@color/Transparente"
+        android:fontFamily="@font/mounthills"
+        android:text="Cerrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonAvisoDePrivacidad" />
+</androidx.constraintlayout.widget.ConstraintLayout>
