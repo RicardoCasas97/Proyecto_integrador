@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragmentos.fragmento_VideoLlamada">
+
+    <EditText
+        style="@style/EditTextNormal"
+        android:id="@+id/edtx_unir"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="12dp"
+        android:hint="Enter room name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boton_unir"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_button"
+        android:text="Unirse"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

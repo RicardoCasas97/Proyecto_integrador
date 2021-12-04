@@ -1,5 +1,2 @@
-include ':photoeditor'
-include ':sample'
-include ':ucrop'
 include ':app'
 rootProject.name = "SegundoPlano"

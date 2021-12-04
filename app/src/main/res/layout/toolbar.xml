@@ -5,13 +5,13 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#000000"
+    android:background="@color/green"
     android:layout_gravity="left"
     >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NomPend"
+        android:text="SP"
         android:textColor="#FFFFFF"
         android:textSize="40sp" />
 </androidx.appcompat.widget.Toolbar>

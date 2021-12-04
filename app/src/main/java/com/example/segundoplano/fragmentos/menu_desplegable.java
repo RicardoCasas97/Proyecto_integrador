@@ -3,6 +3,7 @@ package com.example.segundoplano.fragmentos;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -16,7 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.segundoplano.Calendario.CalendarMainActivity;
 import com.example.segundoplano.R;
+import com.example.segundoplano.databinding.FragmentMenuDesplegableBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,8 +27,8 @@ import com.example.segundoplano.R;
  * create an instance of this fragment.
  */
 public class menu_desplegable extends Fragment {
-    InteraccionMenu interaccionMenu;
-    Button quienesSomos,nuestrosProductos,botonPerfil,botonAviso,botonCerrar;
+    Button botonPerfil,botonCerrar;
+    FragmentMenuDesplegableBinding binding;
     ConstraintLayout background;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -76,63 +79,23 @@ public class menu_desplegable extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_desplegable, container, false);
+        binding= FragmentMenuDesplegableBinding.inflate(inflater,container,false);
+        return binding.getRoot();
     }
 
-    public void Admin(){
-        quienesSomos = getView().findViewById(R.id.botonQuienesSomos);
-        quienesSomos.setText("Precios");
-        quienesSomos.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
-        nuestrosProductos= getView().findViewById(R.id.botonNuestrosProductos);
-        nuestrosProductos.setText("Mensajes");
-        nuestrosProductos.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-
-        botonAviso = getView().findViewById(R.id.botonAvisoDePrivacidad);
-        botonAviso.setText("Avisos");
-        botonAviso.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-        botonAviso.setVisibility(View.GONE);
-
-        botonPerfil= getView().findViewById(R.id.botonPerfil);
-        botonPerfil.setText("Envios Pendientes");
-        botonPerfil.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-        botonPerfil.setVisibility(View.GONE);
-
-        botonCerrar= getView().findViewById(R.id.botonCerrar);
-        botonCerrar.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-
-    }
     public void User(){
-        quienesSomos = getView().findViewById(R.id.botonQuienesSomos);
-        quienesSomos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                interaccionMenu.BotonQuienesSomos();
-                cerrarFragmento();
 
-            }
-        });
-        nuestrosProductos= getView().findViewById(R.id.botonNuestrosProductos);
-        nuestrosProductos.setOnClickListener(new View.OnClickListener() {
+        binding.botonUnirse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                interaccionMenu.BotonNuestrosProductos();
-                cerrarFragmento();
-            }
-        });
-        botonAviso = getView().findViewById(R.id.botonAvisoDePrivacidad);
-        botonAviso.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                interaccionMenu.BotonAvisoDePrivacidad();
-                cerrarFragmento();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.areaDeTrabajo,fragmento_VideoLlamada.newInstance("",""),"Pantalla").commit();
             }
         });
         botonPerfil= getView().findViewById(R.id.botonPerfil);
         botonPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                interaccionMenu.BotonPerfil();
                 cerrarFragmento();
             }
         });
@@ -147,7 +110,7 @@ public class menu_desplegable extends Fragment {
                             .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    interaccionMenu.BotonCerrar();
+                                    getActivity().finish();
                                 }
                             }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
@@ -160,13 +123,23 @@ public class menu_desplegable extends Fragment {
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    interaccionMenu.BotonCerrar();
                                 }
                             }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                         }
                     }).show();
+                }
+            }
+        });
+
+        binding.botonCalendario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivity(new Intent(getContext(), CalendarMainActivity.class));
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
             }
         });
@@ -178,35 +151,8 @@ public class menu_desplegable extends Fragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             background.setBackgroundColor(getActivity().getWindow().getNavigationBarColor());
         }
-        if (mParam1.equals("Admin")){
-            Admin();
-        }
         User();
-        if (mParam2.equals("English")){
-            quienesSomos.setText("About us");
-            nuestrosProductos.setText("Our products");
-            botonAviso.setText("Privacy policy");
-            botonCerrar.setText("Sign out");
-            botonPerfil.setText("profile");
-        }
-        if (mParam2.equals("English") && mParam1.equals("Admin")){
-            quienesSomos.setText("Prices");
-            nuestrosProductos.setText("Messages");
-            botonCerrar.setText("Sign out");
-        }
     }
 
-    public interface InteraccionMenu{
-        public void BotonQuienesSomos();
-        public void BotonNuestrosProductos();
-        public  void BotonAvisoDePrivacidad();
-        public  void BotonPerfil();
-        public  void BotonCerrar();
-    }
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        interaccionMenu = (InteraccionMenu) context;
-    }
 }

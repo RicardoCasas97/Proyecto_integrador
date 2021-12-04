@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/areaDeTrabajo"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Login">
+    tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <Spinner
         android:id="@+id/spinner"
         android:layout_width="120dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -27,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contra_et_login">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/boton_ingresar_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +40,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/boton_registrarse_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,50 +67,21 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="NomPend"
-        android:textSize="80sp"
+        android:text="Student Partner"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        android:checkedButton="@id/rb_User"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-        <RadioButton
-            android:id="@+id/rb_Admin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:buttonTint="@color/moradoAdmin"
-            android:text="Admin" />
-
-        <RadioButton
-            android:id="@+id/rb_User"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:buttonTint="#000000"
-            android:text="User" />
-    </RadioGroup>
 
     <EditText
         android:id="@+id/usuario_et_login"
         style="@style/EditTextNormal"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
         android:hint="Usuario"
         android:inputType="textEmailAddress"
         android:paddingStart="9dp"
@@ -116,18 +89,16 @@
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
         android:id="@+id/contra_et_login"
+        style="@style/EditTextNormal"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        style="@style/EditTextNormal"
         android:hint="Contraseña"
         android:paddingStart="9dp"
         android:paddingLeft="9dp"
@@ -136,17 +107,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usuario_et_login" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/areaDeTrabajo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

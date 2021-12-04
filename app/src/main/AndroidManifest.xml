@@ -13,21 +13,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".ActivityAdmin.ActivityAdminMain"></activity>
-        <activity android:name=".EditorImagen" />
+        <activity
+            android:name=".Reunion.actividadReunion"
+            android:exported="false" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Login">
+        <activity
+            android:name=".Calendario.DailyCalendarActivity"
+            android:exported="true" />
+        <activity android:name=".Calendario.CalendarMainActivity" />
+        <activity android:name=".Calendario.WeekViewActivity" />
+        <activity android:name=".Calendario.EventEditActivity"/>
+
+        <activity
+            android:name=".Login"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
-        <activity
-            android:name="com.yalantis.ucrop.UCropActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

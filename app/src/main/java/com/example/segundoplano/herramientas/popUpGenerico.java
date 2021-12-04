@@ -6,7 +6,10 @@ import android.content.DialogInterface;
 
 public class popUpGenerico {
 
-    public popUpGenerico(Context context,String mensaje,String titulo) {
+    public popUpGenerico() {
+    }
+
+    public popUpGenerico(Context context, String mensaje, String titulo) {
         super();
         AlertDialog.Builder builder= new AlertDialog.Builder(context);
         builder.setMessage(mensaje)
@@ -17,6 +20,15 @@ public class popUpGenerico {
 
             }
         });
+        builder.show();
+    }
+
+    public void desicion(Context context,String mensaje,String titulo, DialogInterface.OnClickListener yes,DialogInterface.OnClickListener no){
+        AlertDialog.Builder builder= new AlertDialog.Builder(context);
+        builder.setMessage(mensaje)
+                .setTitle(titulo)
+                .setNegativeButton("No",no)
+        .setPositiveButton("Si",yes);
         builder.show();
     }
 }

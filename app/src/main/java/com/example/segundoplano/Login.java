@@ -24,7 +24,6 @@ import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.segundoplano.ActivityAdmin.ActivityAdminMain;
 import com.example.segundoplano.fragmentos.fragmento_registrarse;
 import com.example.segundoplano.herramientas.popUpGenerico;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -40,9 +39,7 @@ public class Login extends AppCompatActivity {
     Spinner spinner;
     EditText user,password;
     boolean admin;
-    RadioGroup grupo;
     String idioma;
-    RadioButton rb_Admin,rb_User;
     Button ingresar, registrarse;
     Bundle bundle;
     @Override
@@ -63,12 +60,8 @@ public class Login extends AppCompatActivity {
                 if(ingresar.getText().toString().equals("")||password.getText().toString().equals("")){
                     new popUpGenerico(Login.this,"Ingrese todos los campos","Error");
                 }else{
-                    if (grupo.getCheckedRadioButtonId()==-1){
-                        new popUpGenerico(Login.this,"Por favor seleccione el tipo de acceso","Error");
-                    }else
-                    {
+
                         loggearUsuario(contra);
-                    }
                 }
             }
         });
@@ -123,10 +116,6 @@ public class Login extends AppCompatActivity {
         password= findViewById(R.id.contra_et_login);
         ingresar= findViewById(R.id.boton_ingresar_login);
         registrarse= findViewById(R.id.boton_registrarse_login);
-        grupo = findViewById(R.id.radioGroup);
-        rb_Admin= findViewById(R.id.rb_Admin);
-        rb_User= findViewById(R.id.rb_User);
-
         bundle= new Bundle();
 
         spinner= findViewById(R.id.spinner);
@@ -148,16 +137,9 @@ public class Login extends AppCompatActivity {
                                     public void onClick(DialogInterface dialog, int which) {
                                         user.setText("");
                                         password.setText("");
-                                        if (rb_Admin.isChecked()){
-                                            Intent intent = new Intent(Login.this, ActivityAdminMain.class);
-                                            intent.putExtras(bundle);
-                                            startActivity(intent);
-                                        }else{
-                                            Intent intent = new Intent(Login.this,MainActivity.class);
-                                            intent.putExtras(bundle);
-                                            startActivity(intent);
-                                        }
-
+                                        Intent intent = new Intent(Login.this,MainActivity.class);
+                                        intent.putExtras(bundle);
+                                        startActivity(intent);
                                     }
                                 });
                         builder.show();

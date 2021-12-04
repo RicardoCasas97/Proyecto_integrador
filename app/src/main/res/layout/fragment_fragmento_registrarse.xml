@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#a9a9a9"
+    android:background="@color/green"
     android:translationZ="10dp"
     android:clickable="true"
     tools:context=".fragmentos.fragmento_registrarse"
@@ -19,7 +19,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#121212"
+        android:background="#437C4A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

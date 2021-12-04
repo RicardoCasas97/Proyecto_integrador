@@ -8,32 +8,30 @@
     android:focusableInTouchMode="true"
     android:layout_height="match_parent"
     app:layout_constraintStart_toStartOf="parent"
-    android:background="#000000"
+    android:background="@color/green"
     tools:context=".fragmentos.menu_desplegable">
 
     <Button
-        android:id="@+id/botonQuienesSomos"
+        android:id="@+id/boton_unirse"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/Transparente"
-        android:fontFamily="@font/mounthills"
         style="@style/textoBlancoTVBoldMenu"
-        android:text="Apartado #1"
+        android:text="Unirse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonPerfil" />
 
     <Button
-        android:id="@+id/botonNuestrosProductos"
+        android:id="@+id/botonCalendario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Apartado #2"
+        android:text="Calendario"
         style="@style/textoBlancoTVBoldMenu"
-        android:fontFamily="@font/mounthills"
         android:background="@color/Transparente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonQuienesSomos" />
+        app:layout_constraintTop_toBottomOf="@+id/boton_unirse" />
 
     <Button
         android:id="@+id/botonAvisoDePrivacidad"
@@ -44,8 +42,9 @@
         android:fontFamily="@font/mounthills"
         android:text="Cuestionario"
         app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonNuestrosProductos"
+        app:layout_constraintTop_toBottomOf="@+id/botonCalendario"
         tools:text="Aviso de privacidad" />
 
     <Button
@@ -55,7 +54,7 @@
         android:layout_marginTop="20dp"
         android:text="Perfil"
         style="@style/textoBlancoTVBoldMenu"
-
+        android:visibility="gone"
         android:fontFamily="@font/mounthills"
         android:background="@color/Transparente"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,9 +67,9 @@
         android:layout_height="wrap_content"
         style="@style/textoBlancoTVBoldMenu"
         android:background="@color/Transparente"
-        android:fontFamily="@font/mounthills"
         android:text="Cerrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonAvisoDePrivacidad" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

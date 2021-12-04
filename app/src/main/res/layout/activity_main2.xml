@@ -19,6 +19,12 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="1.0">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unnamed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <FrameLayout
             android:id="@+id/fragmentLayoutPrincipal"
             android:layout_width="0dp"
@@ -37,20 +43,8 @@
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.example.segundoplano.herramientas.MovableFloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/fab_style"
-        android:backgroundTint="#444444"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/ic_message"
-        app:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
